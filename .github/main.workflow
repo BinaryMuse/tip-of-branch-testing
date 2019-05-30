@@ -1,10 +1,10 @@
 workflow "Test workflow" {
   on = "push"
-  resolves = ["BinaryMuse/tip-of-branch@master"]
+  resolves = ["Tip of branch check"]
 }
 
-action "BinaryMuse/tip-of-branch@master" {
-  uses = "BinaryMuse/tip-of-branch@master"
-  args = "master other"
+action "Tip of branch check" {
+  uses = "BinaryMuse/tip-of-branch@1.0.0"
+  args = "master"
   secrets = ["GITHUB_TOKEN"]
 }
