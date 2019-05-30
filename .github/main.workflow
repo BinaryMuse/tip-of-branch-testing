@@ -6,4 +6,5 @@ workflow "Test workflow" {
 action "BinaryMuse/tip-of-branch@master" {
   uses = "BinaryMuse/tip-of-branch@master"
   args = "master other"
+  secrets = ["GITHUB_TOKEN"]
 }
